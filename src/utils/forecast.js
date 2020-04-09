@@ -11,11 +11,13 @@ const forecast = (lat, lon, callback) => {
 		} else {
 			callback(
 				undefined,
-				'The temperature currently is ' +
+				'The temperature is currently ' +
 					body.main.temp +
-					' degrees with ' +
+					'* with ' +
 					body.weather[0].description +
-					' for weather.'
+					' for weather. The humidity level is at ' +
+					body.main.humidity +
+					'%'
 			);
 		}
 	});
